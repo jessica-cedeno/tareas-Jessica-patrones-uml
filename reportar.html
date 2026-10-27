@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportar animal | Sistema de Rescates</title>
+</head>
+<body>
+
+    <header>
+        <h1>Registro de animales rescatados</h1>
+        <p>Formulario para ingresar un nuevo caso</p>
+    </header>
+
+    <nav aria-label="Navegación principal">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="reportar.html">Reportar animal</a></li>
+            <li><a href="rescates.html">Casos de rescate</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Datos del rescate</h2>
+            <p>Complete los siguientes campos con la información del animal.</p>
+
+            <form action="#" method="get">
+
+                <p>
+                    <label for="nombre">Título del caso o nombre provisional:</label>
+                    <input type="text" id="nombre" name="nombre"
+                           placeholder="Ejemplo: Perrito encontrado en el parque"
+                           required>
+                </p>
+
+                <p>
+                    <label for="categoria">Categoría del animal:</label>
+                    <select id="categoria" name="categoria" required>
+                        <option value="">Seleccione una categoría</option>
+                        <option value="perro">Perros</option>
+                        <option value="gato">Gatos</option>
+                        <option value="fauna-silvestre">Fauna silvestre</option>
+                    </select>
+                </p>
+
+                <fieldset>
+                    <legend>Nivel de urgencia médica:</legend>
+
+                    <p>
+                        <input type="radio" id="alta" name="urgencia"
+                               value="alta" required>
+                        <label for="alta">Alta</label>
+                    </p>
+
+                    <p>
+                        <input type="radio" id="media" name="urgencia"
+                               value="media">
+                        <label for="media">Media</label>
+                    </p>
+
+                    <p>
+                        <input type="radio" id="baja" name="urgencia"
+                               value="baja">
+                        <label for="baja">Baja</label>
+                    </p>
+                </fieldset>
+
+                <p>
+                    <label for="ubicacion">Lugar donde se encontró:</label>
+                    <input type="text" id="ubicacion" name="ubicacion"
+                           placeholder="Ejemplo: Parque central" required>
+                </p>
+
+                <p>
+                    <label for="descripcion">Descripción del estado del animal:</label>
+                    <textarea id="descripcion" name="descripcion"
+                              rows="5" cols="40"
+                              placeholder="Describa cómo se encontró al animal..."
+                              required></textarea>
+                </p>
+
+                <p>
+                    <label for="fecha">Fecha del rescate:</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                </p>
+
+                <button type="submit">Registrar caso</button>
+                <button type="reset">Limpiar formulario</button>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contacto: refugio.jessica@gmail.com</p>
+        <p>&copy; 2026 Sistema de Control de Rescates y Adopciones</p>
+    </footer>
+
+</body>
+</html>
